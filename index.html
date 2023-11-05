@@ -33,28 +33,29 @@
     <div class="container">
       <div class="main-div">
         <h1 class="main-heading">SPLITTER</h1>
-        <form action="" id="tip-calculator-form" onsubmit="return validateForm(event)">
+        <form
+          action=""
+          id="tip-calculator-form"
+          onsubmit="return validateForm(event)"
+        >
           <div class="main-box row">
             <div class="calculator col-6">
               <div class="mb-3 bill" id="fbill">
                 <label for="bill" class="form-label">Bill</label>
                 <p class="form-error"></p>
-                <input type="text" class="form-control" id="bill" value="0" name="fbill" />
-                
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bill"
+                  value="0"
+                  name="fbill"
+                />
               </div>
               <div class="mb-3 tip-selector" id="ftip">
                 <h5 class="select-tip">Select tip %</h5>
                 <div class="tip-buttons" id="tip-buttons-form">
                   <p class="form-error"></p>
-                  <button type="button" class="btn btn-primary" id="btn1">
-                    5%
-                  </button>
-                  <button type="button" class="btn btn-primary" id="btn2">
-                    10%
-                  </button>
                 </div>
-                <label for="tip" class="form-label">Custom</label>
-                <input type="text" class="form-control" id="tip" value="0" />
               </div>
               <div class="mb-3 people" id="ftotal-people">
                 <label for="number-of-people" class="form-label"
@@ -67,13 +68,11 @@
                   id="number-of-people"
                   value="0"
                 />
-                
               </div>
               <button
                 type="submit"
                 class="btn btn-primary col-6"
                 id="calculate-tip"
-
               >
                 Calculate Tip
               </button>
@@ -108,26 +107,6 @@
           </div>
         </form>
       </div>
-
-      <!-- Bill
-
-    Select Tip %
-    5%
-    10%
-    15%
-    25%
-    50%
-    Custom
-  
-    Number of People
-  
-    Tip Amount
-    / person
-  
-    Total
-    / person
-  
-    Reset -->
 
       <div class="attribution">
         Challenge by
