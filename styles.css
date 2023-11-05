@@ -84,3 +84,12 @@ body{
 
 }
 
+.form-error{
+    color: red;
+}
+
+.selectedBtn{
+    background-color: green;
+
+}
+

@@ -1,79 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  
-  <title>Tip calculator App</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
 
-</head>
-<body>
-  <h2 class="color-pallete-heading">Color Pallete</h2>
-  <div class="row color-boxes">
-    <div class="box color1"></div>
-    <div class="box color2"></div>
-    <div class="box color3"></div>
-    <div class="box color4"></div>
-    <div class="box color5"></div>
-    <div class="box color6"></div>
-    <div class="box color7"></div>
-  </div>
-  
-  <div class="container">
-    <div class="main-div">
-      <h1 class="main-heading">SPLITTER</h1>
-      <div class="main-box row">
-        <div class="calculator col-6">
-            <div class="mb-3 bill">
-              <label for="bill" class="form-label">Bill</label>
-              <input type="text" class="form-control" id="bill" value="0">
-            </div>
-            <div class="mb-3 tip-selector">
-              
-              <h5 class="select-tip">Select tip %</h5>
-              <div class="tip-buttons">
-                <button type="button" class="btn btn-primary" id="btn1">5%</button>
-                <button type="button" class="btn btn-primary" id="btn2">10%</button>
-              </div>
-              <label for="tip" class="form-label">Custom</label>
-              <input type="text" class="form-control" id="tip" value="0">
-            </div>
-            <div class="mb-3 people">
-              <label for="number-of-people" class="form-label">Number of People</label>
-              <input type="text" class="form-control" id="number-of-people" value="0">
-            </div>
-            <button type="button" class="btn btn-primary col-6" id="calculate-tip">Calculate Tip</button>
-            
-          
-        </div>
-        <div class="display-result col-6">
-
-          <div class="tip-info1 row">
-            <div class="tip-info1-heading col-6">
-              <h4>Tip Amount / person</h4>
-            </div>
-            <div class="tip-info1-value col-6">
-              <span>$0</span>
-            </div>
-          </div>
-          <div class="total-info2 row">
-            <div class="total-info2-heading col-6">
-              <h4>Total / person</h4>
-            </div>
-            <div class="total-info2-value col-6">
-              <span>$0</span>
-            </div>
-          </div>
-          <button type="button" class="btn btn-primary col-12" id="reset-btn">Reset</button>
-        </div>
-      </div>
+    <title>Tip calculator App</title>
+  </head>
+  <body>
+    <h2 class="color-pallete-heading">Color Pallete</h2>
+    <div class="row color-boxes">
+      <div class="box color1"></div>
+      <div class="box color2"></div>
+      <div class="box color3"></div>
+      <div class="box color4"></div>
+      <div class="box color5"></div>
+      <div class="box color6"></div>
+      <div class="box color7"></div>
     </div>
-    
-    <!-- Bill
+
+    <div class="container">
+      <div class="main-div">
+        <h1 class="main-heading">SPLITTER</h1>
+        <form action="" id="tip-calculator-form" onsubmit="return validateForm(event)">
+          <div class="main-box row">
+            <div class="calculator col-6">
+              <div class="mb-3 bill" id="fbill">
+                <label for="bill" class="form-label">Bill</label>
+                <p class="form-error"></p>
+                <input type="text" class="form-control" id="bill" value="0" name="fbill" />
+                
+              </div>
+              <div class="mb-3 tip-selector" id="ftip">
+                <h5 class="select-tip">Select tip %</h5>
+                <div class="tip-buttons" id="tip-buttons-form">
+                  <p class="form-error"></p>
+                  <button type="button" class="btn btn-primary" id="btn1">
+                    5%
+                  </button>
+                  <button type="button" class="btn btn-primary" id="btn2">
+                    10%
+                  </button>
+                </div>
+                <label for="tip" class="form-label">Custom</label>
+                <input type="text" class="form-control" id="tip" value="0" />
+              </div>
+              <div class="mb-3 people" id="ftotal-people">
+                <label for="number-of-people" class="form-label"
+                  >Number of People</label
+                >
+                <p class="form-error"></p>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="number-of-people"
+                  value="0"
+                />
+                
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary col-6"
+                id="calculate-tip"
+
+              >
+                Calculate Tip
+              </button>
+            </div>
+
+            <div class="display-result col-6">
+              <div class="tip-info1 row">
+                <div class="tip-info1-heading col-6">
+                  <h4>Tip Amount / person</h4>
+                </div>
+                <div class="tip-info1-value col-6">
+                  <span>$0</span>
+                </div>
+              </div>
+              <div class="total-info2 row">
+                <div class="total-info2-heading col-6">
+                  <h4>Total / person</h4>
+                </div>
+                <div class="total-info2-value col-6">
+                  <span>$0</span>
+                </div>
+              </div>
+              <button
+                type="reset"
+                class="btn btn-primary col-12"
+                id="reset-btn"
+                onclick="resetForm()"
+              >
+                Reset
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Bill
 
     Select Tip %
     5%
@@ -93,18 +129,15 @@
   
     Reset -->
 
-    <button type="button" class="btn btn-primary">Primary</button>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Harshita Gupta</a>.
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Harshita Gupta</a>.
+      </div>
     </div>
-  </div>
 
-  
-  
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="logic.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="logic.js"></script>
+  </body>
 </html>
