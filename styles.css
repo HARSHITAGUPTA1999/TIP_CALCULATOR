@@ -1,5 +1,8 @@
 body{
     background-color: hsl(185, 41%, 84%);
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    font-weight: 700;
 }
 
 /* color pallete start */
@@ -49,8 +52,8 @@ body{
 /* color pallete end */
 
 .main-div{
-    border: 2px solid red;
-    padding: 50px;
+    /* border: 2px solid red; */
+    padding: 20px;
     background-color: hsl(185, 41%, 84%);
 }
 
@@ -64,32 +67,97 @@ body{
 }
 
 .main-box{
-    border:2px solid black;
+    /* border:2px solid black; */
     background-color:hsl(0, 0%, 100%);
-    height: 500px;
+    /* height: 500px; */
     width: 100%;
     border-radius: 50px;
+    padding:50px;
 }
 
 .calculator{
-    border: 2px solid black;
-    padding:20px;
+    /* border: 2px solid black; */
+    padding: 20px 40px 20px 20px;
     border-radius: 50px;
 }
 
 .display-result{
-    border: 2px solid black;
-    padding:20px;
-    border-radius: 50px;
-
+    /* border: 2px solid black; */
+    padding: 50px 20px;
+    border-radius: 30px;
+    background-color: hsl(183, 100%, 15%);  
 }
 
 .form-error{
     color: red;
+    width: 100%;
+    font-size: 16px;
 }
 
 .selectedBtn{
-    background-color: green;
+    background-color: hsl(172, 67%, 45%) !important;
 
 }
 
+.tip-info1{
+    padding-bottom: 50px;
+}
+
+.tip-info1-heading, .total-info2-heading{
+    color:hsl(0, 0%, 100%);
+    padding-top: 12px;
+}
+
+
+.tip-info1-value , .total-info2-value{
+    color:hsl(172, 67%, 45%);
+    text-align: right;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.total-info2{
+    padding-bottom: 200px;
+}
+
+.reset-btn , .calculate-tip-btn{
+    padding: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 10px;
+}
+
+.calculate-tip-btn{
+    width: 100%;
+}
+
+.tip-selector-btn{
+    width: 20%; 
+    /* background-color: hsl(183, 100%, 15%);  */
+     /* color: hsl(189, 41%, 97%); */
+    margin:10px;
+    padding: 15px;
+    /* border: none; */
+    /* border-radius: 10px; */
+}
+
+.tip-buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.btn-primary{
+    background-color: hsl(183, 100%, 15%); 
+     color: hsl(189, 41%, 97%);
+}
+
+.attribution{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}

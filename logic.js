@@ -7,7 +7,7 @@ function createTipSelectors() {
     let btn = document.createElement("BUTTON");
     btn.innerText = value;
     btn.setAttribute("id", `btn${index + 1}`);
-    btn.classList.add("btn", "btn-primary");
+    btn.classList.add("btn","btn-primary","tip-selector-btn");
     btns.appendChild(btn);
   }
 }
