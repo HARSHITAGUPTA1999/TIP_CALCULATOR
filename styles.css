@@ -1,8 +1,11 @@
-body{
+.app-container{
     background-color: hsl(185, 41%, 84%);
     font-family: 'Space Mono', monospace;
     font-size: 24px;
     font-weight: 700;
+    width: 100%;
+    padding: 20px 50px 50px 50px;
+    
 }
 
 /* color pallete start */
@@ -144,6 +147,10 @@ body{
     /* border-radius: 10px; */
 }
 
+.tip-selector{
+    padding-top: 10px;
+}
+
 .tip-buttons{
     display: flex;
     flex-direction: row;
@@ -161,3 +168,150 @@ body{
     font-weight: 400;
     padding-bottom: 50px;
 }
+
+.features-body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.features-main-div{
+    width:90%;
+    margin:auto;
+}
+
+header {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+section {
+    background-color: #222;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Add transition for left-to-right effect */
+    transform: translateX(-100%); /* Initially position the section off-screen */
+}
+
+h2 {
+    color: #fff;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.feature {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.feature h5 {
+    margin-bottom: 5px;
+    /* color: #aea91d; */
+}
+
+/* Checkmark icon styling */
+.icon {
+    color: #4CAF50;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Description text styling */
+.description {
+    display: none;
+    color: #fff;
+    
+    margin-top: 15px;
+}
+
+
+
+.feature:hover .description {
+    display: block; /* Show description text on hover */
+}
+
+
+.separator {
+    height: 1px;
+    /* background-color: #555; */
+    margin: 24px 0;
+    background-color:#aea91d;;
+}
+
+.project-heading{
+    color: #aea91d;
+    font-family: monospace;
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.desc{
+    margin-bottom:20px;
+    /* color: #aea91d; */
+    letter-spacing: 1px;
+}
+
+/* Style for the menu icon */
+#menu-icon {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+/* Style for the menu icon bars */
+#menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate the bars for the "X" icon */
+#menu-icon.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#menu-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-icon.active div:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Add a class to show the features section */
+.show-features {
+    display: block;
+    transform: translateX(0);
+    margin: auto;
+    width: 55%;
+    padding: 20px;
+}
+
+.hide-calculator{
+    visibility: hidden;
+}
+.hide-feature-section{
+    display: none;
+}
+
